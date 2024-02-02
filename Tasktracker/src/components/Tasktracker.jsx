@@ -46,7 +46,7 @@ const Tasktracker = () => {
   return (
     <>
         <div className='header text-center'>
-            <h3>Task Tracker</h3>
+            <h3 className='tasktracker'>Task Tracker</h3>
              <button className='btn btn-info mt-2' onClick={()=> setModal(true)}>Create Task</button>
         </div>
         <div className='task-container'>

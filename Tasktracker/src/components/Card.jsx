@@ -35,8 +35,8 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
     <div className = {`card-wrapper ${completed ? 'completed' : ''}`}>
             <div className = "card-top"></div>
             <div className = "task-holder">
-                <span className = "card-header" style={{"backgroundColor": "#F2FAF1", "borderRadius": "10px"}}>{taskObj.Name}</span>
-                <p className = "mt-3">{taskObj.Description}</p>
+                <span className = "card-header" style={{"backgroundColor": "#0DCAF0", "borderRadius": "10px"}}>{taskObj.Name}</span>
+                <p className = "ml-3">{taskObj.Description}</p>
 
                 <div style={{"position": "absolute", "right" : "20px", "bottom" : "20px"}}>
                     <i className="fa-solid fa-check icon" onClick={handleComplete}></i>

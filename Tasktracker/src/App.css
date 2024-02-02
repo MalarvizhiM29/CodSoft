@@ -1,21 +1,21 @@
 .header{
   height: 200px;
   width: 100%;
-  background-color : #FFC5C5;
+  background-color : #F18DB5;
   padding-top: 50px;
 }
 
 .card-container{
   height: 300px;
   width: 300px;
-  box-shadow: 0px 3px 50px #A5A5A5;
+  box-shadow: 0px 3px 50px #6C757D;
 }
 
 .card-wrapper{
   margin-left: 2rem;
   width: 270px; 
-  height: 150px; 
-  border: 1px solid black;
+  height: 170px; 
+  border: 1px solid #0DCAF0;
   box-shadow: 0px 3px 20px #A5A5A5;
   border-radius: 1rem;
   display: flex;
@@ -24,7 +24,7 @@
 }
 
 .card-wrapper.completed {
-  filter: blur(1px); 
+  filter: blur(1.5px); 
 }
 
 .card-top{
@@ -63,4 +63,8 @@
   color: #0DCAF0;
   cursor: pointer;
   margin-right: 1rem;
+}
+
+.desc{
+  margin: 2px;
 }
