@@ -33,7 +33,6 @@ const Tasktracker = () => {
         localStorage.setItem("taskList",JSON.stringify(tempList))
         setTaskList(tempList)
         setModal(false)
-        window.location.reload()
     }
 
     const updateListArray = (obj, index) => {
@@ -47,7 +46,7 @@ const Tasktracker = () => {
   return (
     <>
         <div className='header text-center'>
-            <h3>Tasktracker</h3>
+            <h3>Task Tracker</h3>
              <button className='btn btn-info mt-2' onClick={()=> setModal(true)}>Create Task</button>
         </div>
         <div className='task-container'>

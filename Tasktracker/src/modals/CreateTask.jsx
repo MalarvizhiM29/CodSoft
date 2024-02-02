@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast } from 'reactstrap';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreateTask = ({modal , toggle, save}) => {
 
@@ -16,11 +18,22 @@ const CreateTask = ({modal , toggle, save}) => {
         }
     }
 
-    const handleSave = () =>{
+    const handleSave = (e) =>{
+        e.preventDefault()
+
+        if (!taskName || !description) {
+          toast.error('Please fill in all required fields')
+          return;
+        }
+
         let taskObj = {}
         taskObj["Name"] = taskName
         taskObj["Description"] = description
         save(taskObj)
+
+        setTaskName('');
+        setDescription('');
+        toggle();
     }
 
   return (
@@ -31,7 +44,7 @@ const CreateTask = ({modal , toggle, save}) => {
           <form>
             <div className='form-group'>
                 <label>Task Name</label>
-                <input type='text' className='form-control' value={taskName} onChange={handleChange} name='taskName' required/>
+                <input type='text' className='form-control' value={taskName} onChange={handleChange} name='taskName'/>
             </div>
             <div className='form-group'>
                 <label>Description</label>
@@ -48,6 +61,7 @@ const CreateTask = ({modal , toggle, save}) => {
           </Button>
         </ModalFooter>
       </Modal>
+      <ToastContainer/>
     </>
   )
 }
