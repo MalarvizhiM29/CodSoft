@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CreateTask from '../modals/createTask';
+import Card from './Card';
 
 const Tasktracker = () => {
 
@@ -9,11 +10,20 @@ const Tasktracker = () => {
     useEffect(()=>{
         let arr = localStorage.getItem("taskList");
         
-        if(obj){
+        if(arr){
             let obj = JSON.parse(arr);
             setTaskList(obj);
         }
-    })
+    },[])
+
+    const deleteTask = (index) => {
+      let tempList = taskList
+      tempList.splice(index,1)
+      localStorage.setItem("taskList", JSON.stringify(tempList))
+      setModal(false)
+      setTaskList(tempList)
+      window.location.reload()
+    }
 
     const toggle = () => setModal(!modal);
 
@@ -23,6 +33,15 @@ const Tasktracker = () => {
         localStorage.setItem("taskList",JSON.stringify(tempList))
         setTaskList(tempList)
         setModal(false)
+        window.location.reload()
+    }
+
+    const updateListArray = (obj, index) => {
+      let tempList = taskList
+      tempList[index] = obj
+      localStorage.setItem("taskList", JSON.stringify(tempList))
+      setTaskList(tempList)
+      window.location.reload()
     }
 
   return (
@@ -32,7 +51,7 @@ const Tasktracker = () => {
              <button className='btn btn-info mt-2' onClick={()=> setModal(true)}>Create Task</button>
         </div>
         <div className='task-container'>
-          {taskList.map((obj)=> <li>{obj.Name}</li>)}
+          {taskList && taskList.map((obj, index)=> <Card key={index} taskObj={obj} index={index} deleteTask={deleteTask} updateListArray={updateListArray}/>)}
         </div>
         <CreateTask toggle={toggle} modal={modal} save={saveTask}/>
     </>

@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-const CreateTask = ({modal , toggle, save}) => {
+const EditTask = ({modal , toggle, updateTask, taskObj}) => {
+
+    useEffect(()=>{
+        setTaskName(taskObj.Name)
+        setDescription(taskObj.Description)
+    },[])
 
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
@@ -16,22 +21,24 @@ const CreateTask = ({modal , toggle, save}) => {
         }
     }
 
-    const handleSave = () =>{
-        let taskObj = {}
-        taskObj["Name"] = taskName
-        taskObj["Description"] = description
-        save(taskObj)
+    const handleUpdate = (e)=>{
+        e.preventDefault();
+        let tempObj = {}
+        tempObj['Name'] = taskName
+        tempObj['Description'] = description
+        updateTask(tempObj)
+        toggle()
     }
 
   return (
     <>
         <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Create Task</ModalHeader>
+        <ModalHeader toggle={toggle}>Update Task</ModalHeader>
         <ModalBody>
           <form>
             <div className='form-group'>
                 <label>Task Name</label>
-                <input type='text' className='form-control' value={taskName} onChange={handleChange} name='taskName' required/>
+                <input type='text' className='form-control' value={taskName} onChange={handleChange} name='taskName' />
             </div>
             <div className='form-group'>
                 <label>Description</label>
@@ -40,8 +47,8 @@ const CreateTask = ({modal , toggle, save}) => {
           </form>
         </ModalBody>
         <ModalFooter>
-          <Button color="info" onClick={handleSave}>
-            Create
+          <Button color="info" onClick={handleUpdate}>
+            Update
           </Button>{' '}
           <Button color="secondary" onClick={toggle}>
             Cancel
@@ -52,4 +59,4 @@ const CreateTask = ({modal , toggle, save}) => {
   )
 }
 
-export default CreateTask
+export default EditTask
