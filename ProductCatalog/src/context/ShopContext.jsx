@@ -14,6 +14,24 @@ const getDefaultCart = () => {
 const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
+    const getTotalCartAmount = () =>{
+        let totalAmount = 0;
+        for(const item in cartItems){
+            if(cartItems[item] > 0){
+                let itemInfo = PRODUCTS.find((Product)=> Product.id === Number(item))
+
+                const itemPrice = itemInfo && typeof itemInfo.price === 'string' ? parseFloat(itemInfo.price.replace(',', '')) : itemInfo.price;
+
+                if (itemInfo && typeof itemPrice === 'number') {
+                    totalAmount += cartItems[item] * itemPrice;
+                    console.log(itemPrice);
+                }
+                }
+        }
+
+        return totalAmount;
+    }
+
     const addToCart = (itemId) =>{
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId]+1}))
     }
@@ -22,9 +40,12 @@ const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId]-1}))
     }
 
-    const contextValue = {cartItems, addToCart, removeFromCart}
+    const updateCartItemCount = (newAmount, itemId) => {
+        setCartItems((prev) => ({...prev,[itemId]:newAmount}))
+    }
 
-    console.log(cartItems);
+    const contextValue = {cartItems, addToCart, removeFromCart,updateCartItemCount, getTotalCartAmount}
+
   return (
     <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
   )
