@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import {ShopContext} from '../../context/ShopContext';
+import { Link } from 'react-router-dom';
 
 const Product = (props) => {
 
@@ -11,6 +12,7 @@ const Product = (props) => {
     <>
         <div className='product'>
             {" "}
+            <Link to={`/product/${id}`} style={{ textDecoration: 'none', color: 'black' }} className="product-link">
             <img src={productImage} className='productimg'/>
             <div className="description">
                 <p>
@@ -19,6 +21,7 @@ const Product = (props) => {
                 <p>{description}</p>
                 <p>₹{price}</p>
             </div>
+            </Link>
             <button className='addToCartBttn' onClick={()=> addToCart(id)}>
             Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
             </button>

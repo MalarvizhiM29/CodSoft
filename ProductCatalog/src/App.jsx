@@ -5,6 +5,7 @@ import "./App.css"
 import Cart from './pages/Cart/Cart'
 import Shop from './pages/Shop/Shop'
 import ShopContextProvider from './context/ShopContext'
+import ProductDetail from './pages/Shop/ProductDetails'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Navbar/>
           <Routes>
             <Route path='/' element={<Shop/>}/>
+            <Route path="/product/:id" element={<ProductDetail/>} />
             <Route path='/cart' element={<Cart/>}/>
           </Routes>
         </Router>
