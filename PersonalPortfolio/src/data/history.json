@@ -1,0 +1,29 @@
+[
+    {
+      "role": "REACT Developer",
+      "organisation": "Codsoft",
+      "startDate": "20 Jan, 2024",
+      "endDate": "Present",
+      "experiences": ["Worked on React Projects ", "Created User friendly Websites"],
+      "imageSrc": "history/codsoft.jpg"
+    },
+    {
+      "role": "MERN Developer",
+      "organisation": "Better Tomorrow",
+      "startDate": "18 Dec, 2023",
+      "endDate": "29 Dec, 2023",
+      "experiences": ["Worked on Swiggy clone", "Worked with fetching real API"],
+      "imageSrc": "history/bt.jpeg"
+    },
+    {
+      "role": "MERN Developer",
+      "organisation": "Nullclass",
+      "startDate": "1 Aug, 2023",
+      "endDate": "31 Aug, 2023",
+      "experiences": [
+        "Worked on MERN Projects",
+        "Developed a Full Stack Project"
+      ],
+      "imageSrc": "history/nullclass.jpeg"
+    }
+  ]
