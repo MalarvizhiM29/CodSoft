@@ -23,10 +23,10 @@ export const ProjectCard = ({
         })}
       </ul>
       <div className="pcardlinks">
-        <a href={demo} className="pcardlink">
+        <a href={demo} className="pcardlink" target="__blank">
           Demo
         </a>
-        <a href={source} className="pcardlink">
+        <a href={source} className="pcardlink" target="__blank">
           Source
         </a>
       </div>

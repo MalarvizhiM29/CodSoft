@@ -17,12 +17,12 @@ const Contact = () => {
 
                 <li className="contactlink">
                     <img src={getImageUrl("contact/linkedinIcon.png")} alt='LinkedIn Icon'/>
-                    <a href="https://www.linkedin.com/in/malarvizhi-m-96885b223/">malarvizhi-m-96885b223</a>
+                    <a href="https://www.linkedin.com/in/malarvizhi-m-96885b223/" target="__blank">malarvizhi-m-96885b223</a>
                 </li>
 
                 <li className="contactlink">
                     <img src={getImageUrl("contact/githubIcon.png")} alt='Github Icon'/>
-                    <a href="https://github.com/malarvizhiM29/">malarvizhiM29</a>
+                    <a href="https://github.com/malarvizhiM29/" target="__blank">malarvizhiM29</a>
                 </li>
             </ul>
         </footer>
