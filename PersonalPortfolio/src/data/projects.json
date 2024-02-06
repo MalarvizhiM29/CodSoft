@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Stay Vista",
+        "imageSrc": "projects/project.png",
+        "description": "A Hotel Room Booking website with the features of search bar to find best Hotel.",
+        "skills": ["React", "Express", "Node", "MongoDB"],
+        "demo": "https://hotel-room-booking-app-frontend.vercel.app/",
+        "source": "https://github.com/MalarvizhiM29/HotelRoomBooking"
+    },
+    {
+      "title": "Stripe Reader",
+      "imageSrc": "projects/project.png",
+      "description": "A subscription based article reading website using stripe payment gateway.",
+      "skills": ["Typescript", "React", "Express", "Node"],
+      "demo": "http://surl.li/ovuue",
+      "source": "https://github.com/MalarvizhiM29/SimpleReader"
+    },
+    {
+      "title": "Promptopia",
+      "imageSrc": "projects/project.png",
+      "description": "An Open Source AI prompting tool to create, discover and share creative prompts.",
+      "skills": ["Javascript", "Next", "MongoDB"],
+      "demo": "http://surl.li/ovusj",
+      "source": "https://github.com/MalarvizhiM29/Promptopia"
+    },
+    {
+      "title": "Prakriti Ayurbot",
+      "imageSrc": "projects/project.png",
+      "description": "An chatbot to find ones individual prakriti like vata, pitha & kapha using 15 questions.",
+      "skills": ["Javascript", "React", "Python"],
+      "demo": "https://ayurbot.vercel.app/",
+      "source": "https://github.com/MalarvizhiM29/Ayurbot"
+    },
+    {
+      "title": "Cake Craft",
+      "imageSrc": "projects/project.png",
+      "description": "Digitalized menu card in which admin can maintain their cake availability.",
+      "skills": ["React", "Express", "Node", "MongoDB"],
+      "demo": "https://cakeshop-omega.vercel.app",
+      "source": "https://github.com/MalarvizhiM29/cakecraft"
+    },
+    {
+      "title": "Swiggy Clone",
+      "imageSrc": "projects/project.png",
+      "description": "Swiggy Clone website using the official swiggy API with filtering features and routing pages.",
+      "skills": ["Javascript", "React", "Swiggy API"],
+      "demo": "https://swiggy-mu.vercel.app/",
+      "source": "https://github.com/MalarvizhiM29/BT-Intern/tree/main/Advanced-Mern/Day-8/my-app"
+    }
+  ]
