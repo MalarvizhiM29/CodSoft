@@ -3,13 +3,14 @@
     height: 80px;
     background-color: rgb(19, 19, 19);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
   }
   
   .navlinks {
     margin-right: 50px;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
   }
   
@@ -19,7 +20,10 @@
     margin-left: 20px;
     font-size: 25px;
   }
-
+.navbar h2{
+  color: #ffffff;
+  margin-left: 2rem;
+}
 
 /* shop */
 
@@ -31,24 +35,32 @@
 .products {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 6rem 10rem;
 }
 
 .product {
   border-radius: 15px;
   width: 300px;
   height: 400px;
-  margin: 100px;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.product:hover{
+  border: 2px solid black;;
 }
 
 .product img {
-  width: 400px;
+  width: 250px;
+  height: 150px;
+  margin-left: 1.2rem;
 }
 
 .product .description {
@@ -101,7 +113,8 @@
 }
 
 .cartItem img {
-  width: 200px;
+  width: 150px;
+  margin: 0 2rem;
 }
 
 .cartItem .description {
@@ -124,4 +137,44 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+}
+
+.productdet {
+  text-align: center;
+  border-radius: 15px;
+  width: 30rem;
+  height: 30rem;
+  margin: 1rem 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  padding: 0 15rem;
+}
+
+.productdet img {
+  width: 250px;
+  height: 180px;
+  margin-left: 1.2rem;
+}
+
+.productder .descriptiondet {
+  text-align: center;
+}
+
+.productdet:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttndet {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
 }

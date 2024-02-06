@@ -17,16 +17,16 @@ const ProductDetail = () => {
     const cartItemAmount = cartItems[id] || 0;
 
     return (
-        <div className='product'>
-            <img src={product.productImage} className='productimg' alt={product.productName} />
-            <div className="description">
+        <div className='productdet'>
+            <img src={product.productImage} className='productimgdet' alt={product.productName} />
+            <div className="descriptiondet">
                 <p>
                     <b>{product.productName}</b>
                 </p>
                 <p>{product.description}</p>
                 <p>₹{product.price}</p>
             </div>
-            <button className='addToCartBttn' onClick={() => addToCart(id)}>
+            <button className='addToCartBttndet' onClick={() => addToCart(id)}>
                 Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
             </button>
         </div>
