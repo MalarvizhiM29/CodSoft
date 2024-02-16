@@ -1,8 +1,12 @@
 .header{
   height: 200px;
   width: 100%;
-  background-color : #F18DB5;
+  background-color : #374259;
   padding-top: 50px;
+}
+
+.tasktracker{
+  color: #ffffff;
 }
 
 .card-container{
@@ -55,7 +59,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: #F6F7F8;
+  background-color: #DDE6ED;
   padding : 40px 100px;
 }
 
